@@ -1,0 +1,67 @@
+PostGressql -01
+#Listando bases de dados #
+ comando permite executar comandos como outro usuário.,
+a Partir de dentro do psql terminal executar \l ou \list meta-comando para listar todos os bancos de dados:
+
+_____________________________________________________
+
+#Para criar uma base de dados basta apenas executar o comando:
+CREATE DATABASE <nome da tabela>;
+______________________________________________________
+
+# seleciona 
+\c ebac
+______________________________________________________
+#Base de Dados e Esquemas
+A sintaxe para criação de um schema é:
+CREATE SCHEMA <schema_name>; ou
+CREATE SCHEMA IF NOT EXISTS <schema_name>;
+
+______________________________________________________
+
+#Criar Tabelas
+Para criar Tabelas e Colunas no SQL precisamos utilizar o comando CREATE
+TABLE seguido das informações de Colunas:
+Definindo a Estrutura de um Banco de Dados (DDL)
+CREATE TABLE table_name(
+column1 datatype,
+column2 datatype,
+column3 datatype,
+.....
+columnN datatype,
+PRIMARY KEY ( one or more columns )
+
+\dt store.*
+select "store".cutomer;
+
+select *from "store".customer;
+
+______________________________________________________
+
+#Remover Tabelas
+Para remover Tabelas:
+DROP TABLE <Nome da Tabela>
+DROP TABLE Customer
+
+______________________________________________________
+
+#Adicionar Colunas
+Remover Colunas
+Para adicionar Colunas em tabelas existentes no SQL precisamos utilizar o
+comando ALTER TABLE seguido das informações da coluna que queremos
+
+______________________________________________________
+#adicionar
+\d+ custumer
+ALTER TABLE <Nome da Tabela> ADD <nome da coluna> <tipo do campo>
+ALTER TABLE Customer ADD email varchar;
+ ALTER TABLE custumer ADD nome varchar(30);
+
+______________________________________________________
+#Remover Colunas
+Para remover Colunas em tabelas existentes no SQL precisamos utilizar o
+comando ALTER TABLE seguido das informações da coluna que queremos
+remover
+ALTER TABLE <Nome da Tabela> DROP <nome da coluna> <tipo do campo>;
+ALTER TABLE Customer DROP email varchar;
+ALTER TABLE custumer DROP nome;
